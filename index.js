@@ -8,7 +8,7 @@ app.use(morgan('tiny'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post('/api/v0/add', function(req, res) {
+app.post('/ipfsapi/v0/add', function(req, res) {
   return res.status(200).send({ message: 'good, loved it' });
 });
 
