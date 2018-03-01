@@ -9,6 +9,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/ipfsapi/v0/add', function(req, res) {
+  if (!req.file) {
+    return res.status(400).send({ message: 'bad, hated it' });
+  }
   return res.status(200).send({ message: 'good, loved it' });
 });
 
